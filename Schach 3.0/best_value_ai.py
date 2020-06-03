@@ -2,7 +2,7 @@ from game_mechanics import *
 import random
 
 
-def best_value_ai(board, team, ai_messages):
+def ai_function(board, team, ai_messages):
 
     movable_figures = []                                                #creates array for movable figures
 

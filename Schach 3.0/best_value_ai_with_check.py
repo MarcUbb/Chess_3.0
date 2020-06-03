@@ -4,7 +4,7 @@ import random
 import copy
 
 
-def best_value_ai_with_check(board, team, ai_messages):
+def ai_function(board, team, ai_messages):
 
     king_pos_x = 0
     king_pos_y = 0

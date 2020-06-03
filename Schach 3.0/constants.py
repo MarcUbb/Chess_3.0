@@ -1,6 +1,7 @@
 import classes
-
+import importlib
 import pygame
+import sys
 
 ########## WINDOW ##########
 BACKGROUND = (255,255,255)
@@ -52,7 +53,7 @@ MOVE = False
 
 CHECK = 0
 
-GAMEMODE = 2
+GAMEMODE = 0
 AI_TURN = 1
 AI_DELAY = 1
 ############################
@@ -81,3 +82,18 @@ MOVES_AVERAGE_PLOT = []
 
 UPDATE_FREQUENCY = 10
 ############################
+
+
+
+
+########## IMPORT OF AI MODULES ########
+
+GAMEMODE = len(sys.argv) - 1
+AI_1 = 0
+AI_2 = 0
+if GAMEMODE == 0:
+    pass
+if GAMEMODE >= 1:
+    AI_1 = importlib.import_module(sys.argv[1])
+if GAMEMODE == 2:
+    AI_2 = importlib.import_module(sys.argv[2])
