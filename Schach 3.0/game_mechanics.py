@@ -1,6 +1,8 @@
 import classes
 import constants
 
+import pygame
+
 def check_for_draw():
     movable_figures = []
 
@@ -234,11 +236,11 @@ def choose_figure(board, AI_SELECTION):
                     board.fields[pawn.pos_y][pawn.pos_x].figure_type = 5
 
                 pygame.init()  # initializing Pygame
-                screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))  # initializing window
-                ICON = pygame.image.load(ICON_PATH)  # set icon image
+                screen = pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))  # initializing window
+                ICON = pygame.image.load(constants.ICON_PATH)  # set icon image
 
-                pygame.display.set_caption(TITLE)  # imports title to window
-                pygame.display.set_icon(ICON)  # imports icon to window
+                pygame.display.set_caption(constants.TITLE)  # imports title to window
+                pygame.display.set_icon(constants.ICON)  # imports icon to window
                 return board
 
 
