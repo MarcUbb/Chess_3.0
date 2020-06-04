@@ -57,7 +57,7 @@ FIELD_SIZE = 100
 
 ########## GAME ############
 RUNNING = True
-TURN = 2
+TURN = 1
 MOVE = False
 
 CHECK = 0
