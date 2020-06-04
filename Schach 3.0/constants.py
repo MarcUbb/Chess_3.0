@@ -3,6 +3,8 @@ import importlib
 import pygame
 import sys
 
+
+
 ########## WINDOW ##########
 BACKGROUND = (255,255,255)
 SCREEN_WIDTH = 1200
@@ -18,6 +20,7 @@ pygame.display.set_icon(ICON)
 TITLE = "Chess"
 pygame.display.set_caption(TITLE)
 ############################
+
 
 
 ########## BOARDS ##########
@@ -44,6 +47,7 @@ BOARD_DEAD = classes.Board(DEAD_POS, 8)
 MARKER_COLOR = (255,0,0)
 FIELD_SIZE = 100
 ############################
+
 
 
 ########## GAME ############
@@ -85,9 +89,7 @@ UPDATE_FREQUENCY = 10
 
 
 
-
 ########## IMPORT OF AI MODULES ########
-
 GAMEMODE = len(sys.argv) - 1
 AI_1 = 0
 AI_2 = 0
@@ -97,3 +99,4 @@ if GAMEMODE >= 1:
     AI_1 = importlib.import_module(sys.argv[1])
 if GAMEMODE == 2:
     AI_2 = importlib.import_module(sys.argv[2])
+########################################
