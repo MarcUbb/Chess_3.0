@@ -2,6 +2,7 @@
 README - AI PROGRAMMING
 
 --------------------------------------------------------------------------------------------------------------------------------
+
 Your AI will be called as followed:
 
 	FIELD_CHOSEN, FIELD_MOVE, AI_MESSAGES = constants.AI_1.ai_function(constants.BOARD, constants.TURN)
@@ -13,10 +14,9 @@ Your AI function in your python file MUST HAVE THE FOLLOWING HEADLINE:
 And MUST HAVE FOLLOWINT RETURNS:
 	
 	return(FIELD_CHOSEN, FIELD_MOVE, AI_MESSAGES)
+	
 --------------------------------------------------------------------------------------------------------------------------------
 
-
---------------------------------------------------------------------------------------------------------------------------------
 ARGUMENTS:
 
 Since the AI is not allowed to have access to the games parameters it will be given the current positioning in form of board object and its team.
@@ -69,8 +69,6 @@ Attributes:
 
 --------------------------------------------------------------------------------------------------------------------------------
 
-
---------------------------------------------------------------------------------------------------------------------------------
 RETURNS:
 
 "FIELD_CHOSEN" 		- the field on which the figure your AI wants to move is
