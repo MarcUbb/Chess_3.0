@@ -28,7 +28,7 @@ def mouse_coordinates_to_field():
 
 def draw_window():
     constants.SCREEN.fill(constants.BACKGROUND)
-    constants.SCREEN.blit(pygame.image.load(constants.BOARD_IMAGE), (0, 0))
+    constants.SCREEN.blit(pygame.image.load( "images\\board.png" ), (0, 0))
 
     for i in constants.BOARD.fields:
         for f in i:
@@ -36,31 +36,31 @@ def draw_window():
                 pygame.draw.rect(constants.SCREEN, constants.MARKER_COLOR,(f.pos_x*constants.FIELD_SIZE, f.pos_y*constants.FIELD_SIZE, constants.FIELD_SIZE, constants.FIELD_SIZE))
             if f.figure_team == 1:
                 if f.figure_type == 1:
-                    constants.SCREEN.blit(pygame.image.load("white_pawn.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_pawn.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 2:
-                    constants.SCREEN.blit(pygame.image.load("white_rook.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_rook.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 3:
-                    constants.SCREEN.blit(pygame.image.load("white_knight.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_knight.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 4:
-                    constants.SCREEN.blit(pygame.image.load("white_bishop.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_bishop.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 5:
-                    constants.SCREEN.blit(pygame.image.load("white_queen.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_queen.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 6:
-                    constants.SCREEN.blit(pygame.image.load("white_king.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_king.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
 
             elif f.figure_team == 2:
                 if f.figure_type == 1:
-                    constants.SCREEN.blit(pygame.image.load("black_pawn.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_pawn.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 2:
-                    constants.SCREEN.blit(pygame.image.load("black_rook.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_rook.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 3:
-                    constants.SCREEN.blit(pygame.image.load("black_knight.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_knight.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 4:
-                    constants.SCREEN.blit(pygame.image.load("black_bishop.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_bishop.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 5:
-                    constants.SCREEN.blit(pygame.image.load("black_queen.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_queen.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 6:
-                    constants.SCREEN.blit(pygame.image.load("black_king.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_king.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
 
     for i in constants.BOARD_DEAD.fields:
         for f in i:
@@ -68,31 +68,31 @@ def draw_window():
                 pygame.draw.rect(constants.SCREEN, constants.MARKER_COLOR, (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE, constants.FIELD_SIZE, constants.FIELD_SIZE))
             if f.figure_team == 1:
                 if f.figure_type == 1:
-                    constants.SCREEN.blit(pygame.image.load("white_pawn.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_pawn.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 2:
-                    constants.SCREEN.blit(pygame.image.load("white_rook.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_rook.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 3:
-                    constants.SCREEN.blit(pygame.image.load("white_knight.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_knight.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 4:
-                    constants.SCREEN.blit(pygame.image.load("white_bishop.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_bishop.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 5:
-                    constants.SCREEN.blit(pygame.image.load("white_queen.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_queen.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 6:
-                    constants.SCREEN.blit(pygame.image.load("white_king.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\white_king.png"),(f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
 
             elif f.figure_team == 2:
                 if f.figure_type == 1:
-                    constants.SCREEN.blit(pygame.image.load("black_pawn.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_pawn.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 2:
-                    constants.SCREEN.blit(pygame.image.load("black_rook.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_rook.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 3:
-                    constants.SCREEN.blit(pygame.image.load("black_knight.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_knight.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 4:
-                    constants.SCREEN.blit(pygame.image.load("black_bishop.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_bishop.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 5:
-                    constants.SCREEN.blit(pygame.image.load("black_queen.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_queen.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
                 elif f.figure_type == 6:
-                    constants.SCREEN.blit(pygame.image.load("black_king.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
+                    constants.SCREEN.blit(pygame.image.load( "images\\black_king.png"), (f.pos_x * constants.FIELD_SIZE, f.pos_y * constants.FIELD_SIZE))
 
     if constants.CHECK == 0:
         text = ""

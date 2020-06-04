@@ -20,8 +20,7 @@ while True:                             # starts game loop
 
     if constants.RUNNING == True:       # game is running
         basic_functions.draw_window()   # update pygame window
-        basic_functions.change_turn()   # change turn
-
+        
         if constants.GAMEMODE == 0:     # human vs human
             moves.human_move()          # execute human move
 

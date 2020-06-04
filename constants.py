@@ -13,12 +13,17 @@ SCREEN = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 
 BOARD_IMAGE = "board.png"
 
-ICON_PATH = "logo.png"
+ICON_PATH = "images\logo.png"
 ICON = pygame.image.load(ICON_PATH)
 pygame.display.set_icon(ICON)
 
 TITLE = "Chess"
 pygame.display.set_caption(TITLE)
+
+
+
+FIELD_CHOSEN = 0
+FIELD_MOVE = 0
 ############################
 
 
@@ -59,7 +64,7 @@ CHECK = 0
 
 GAMEMODE = 0
 AI_TURN = 1
-AI_DELAY = 1
+AI_DELAY = 1000
 ############################
 
 
@@ -90,13 +95,14 @@ UPDATE_FREQUENCY = 10
 
 
 ########## IMPORT OF AI MODULES ########
+AI_PATH = "AI_s."
 GAMEMODE = len(sys.argv) - 1
 AI_1 = 0
 AI_2 = 0
 if GAMEMODE == 0:
     pass
 if GAMEMODE >= 1:
-    AI_1 = importlib.import_module(sys.argv[1])
+    AI_1 = importlib.import_module(AI_PATH + sys.argv[1])
 if GAMEMODE == 2:
-    AI_2 = importlib.import_module(sys.argv[2])
+    AI_2 = importlib.import_module(AI_PATH + sys.argv[2])
 ########################################
