@@ -16,9 +16,9 @@ def ai_move():
     pygame.time.wait(constants.AI_DELAY)                                # short delay so AI moves become visible
     AI_MESSAGES = [0]
     if constants.TURN == 1 or (constants.GAMEMODE == 1 and constants.TURN == constants.AI_TURN):                                # AI which is used in gamemode 1
-        FIELD_CHOSEN, FIELD_MOVE, AI_MESSAGES = constants.AI_1.ai_function(constants.BOARD, constants.TURN, [constants.CHECK])
+        FIELD_CHOSEN, FIELD_MOVE, AI_MESSAGES = constants.AI_1.ai_function(constants.BOARD, constants.TURN)
     elif constants.TURN == 2:                                                                                                   # 2nd AI
-        FIELD_CHOSEN, FIELD_MOVE, AI_MESSAGES = constants.AI_2.ai_function(constants.BOARD, constants.TURN, [constants.CHECK])
+        FIELD_CHOSEN, FIELD_MOVE, AI_MESSAGES = constants.AI_2.ai_function(constants.BOARD, constants.TURN)
 
     game_mechanics.check_for_draw()                                                 # checks if the game drawed
     game_mechanics.valid_ai_move(FIELD_CHOSEN, FIELD_MOVE)                          # checks if the AIs move was valid
