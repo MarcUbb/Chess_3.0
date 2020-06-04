@@ -51,6 +51,7 @@ def human_move():
                 game_mechanics.check_for_chess()
                 constants.BOARD = game_mechanics.choose_figure(constants.BOARD, 0)
                 basic_functions.change_turn()  
+                game_mechanics.reset_markers()
                 constants.MOVE = False
 
             else:                                                                                               #if a friendly figure is selected

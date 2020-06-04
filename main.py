@@ -30,3 +30,5 @@ while True:                             # starts game loop
 
         elif constants.GAMEMODE == 2:   # AI vs AI
             moves.ai_move()             # execute AI move
+
+        constants.BOARD.fields[7][8].active = False
