@@ -193,8 +193,16 @@ def choose_figure(board, AI_SELECTION):
 
     if pawn == 0:
         return board
+    
+    if AI_SELECTION == 1 or AI_SELECTION > 5:
+        print("INVALID FIGURE CHOSEN BY TEAM", constants.TURN, "!!!")
+        if constants.TURN == 1:
+            constants.WINS_BLACK += 1
+        else:
+            constants.WINS_WHITE += 1
+        constants.RUNNING = False
 
-    if AI_SELECTION > 0:
+    if AI_SELECTION > 1 and AI_SELECTION < 6:
         board.fields[pawn.pos_y][pawn.pos_x].figure_type = AI_SELECTION
         return board
 
