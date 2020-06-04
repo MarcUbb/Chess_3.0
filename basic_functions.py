@@ -23,7 +23,7 @@ def reset_game():
 
 
 def mouse_coordinates_to_field():
-    if pygame.mouse.get_pos()[0] > 700 or pygame.mouse.get_pos()[1] > 700:
+    if pygame.mouse.get_pos()[0] > 800 or pygame.mouse.get_pos()[1] > 800:
         return 8,7
     else:
         return int(math.floor(float(pygame.mouse.get_pos()[0])/100.0)), int(math.floor(float(pygame.mouse.get_pos()[1])/100.0))
