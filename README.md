@@ -11,7 +11,7 @@ Your AI function in your python file MUST HAVE THE FOLLOWING HEADLINE:
 
 	def ai_function(board, team):
 	
-And MUST HAVE FOLLOWINT RETURNS:
+And MUST HAVE FOLLOWING RETURNS:
 	
 	return(FIELD_CHOSEN, FIELD_MOVE, AI_MESSAGES)
 	
