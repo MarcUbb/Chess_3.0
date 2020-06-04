@@ -70,13 +70,6 @@ def reset_markers():
             f.rochade_flag = 0
 
 
-def reset_specific_markers(board):  # TODO create new file AI_functions for functions to evaluate boards etc.
-    for i in board.fields:
-        for f in i:
-            f.active = False
-            f.rochade_flag = 0
-
-
 
 
 
