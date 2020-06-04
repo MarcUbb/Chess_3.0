@@ -77,4 +77,5 @@ RETURNS:
 "FIELD_MOVE" 		- the field your AI wants to move the figure from "FIELD_CHOSEN" to
 "AI_MESSAGES[0]"	- the figure type your AI wants to chose if a pawn reaches the end (2-rook, 3-knight, 4-bishop, 5-queen)
 "AI_MESSAGES[1]"	- not used yet
+
 --------------------------------------------------------------------------------------------------------------------------------
