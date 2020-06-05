@@ -89,7 +89,7 @@ DRAWS_PLOT = []
 MOVES_PLOT = []
 MOVES_AVERAGE_PLOT = []
 
-UPDATE_FREQUENCY = 10
+UPDATE_FREQUENCY = 100
 ############################
 
 
