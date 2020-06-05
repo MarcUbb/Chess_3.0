@@ -3,7 +3,6 @@ import random
 import evaluation
 
 def ai_function(board, TEAM):
-
     if check_for_check(board, TEAM):
         print("Ohh ich bin schach du alter Schlawiner!")
         king = 0
@@ -19,9 +18,9 @@ def ai_function(board, TEAM):
                     possible_moves.append(king)
         figure_chosen = king
         if len(possible_moves) <= 0:
-            return (0, 0, [0, TEAM])
+            return (king, board.fields[0][0] , [0, TEAM])
         figure_move = possible_moves[random.randint(0, len(possible_moves)-1)]
-        return(figure_chosen, figure_move, [0, 0])
+        return(figure_chosen, figure_move , [0, 0])
 
     friendly_fields = []
 
@@ -64,7 +63,7 @@ def ai_function(board, TEAM):
             if f.active == True:
                 possible_moves.append((f,f.figure_type))
     if len(possible_moves) <= 0:
-        return(0, 0, [5, TEAM])    
+        return(figure_chosen, board.fields[0][0], [5, TEAM])    
     figure_move = possible_moves[random.randint(0, len(possible_moves)-1)][0]
 
     for i in possible_moves:

@@ -34,7 +34,7 @@ def get_positioning(board): # returns positioning on a board in initialisation f
 
 ########################### MOVE PATTERN ##########################
 
-def mark_move_pattern(field,board):  # activates al fields a given figure can be moved to
+def mark_move_pattern(field,board):  # activates all fields a given figure can be moved to
     field.move_pattern = pattern_generator(field.figure_type, field.figure_team)  #allways reload Moveset so we can later delete unavailable Moves
     if field.figure_team == 0 or field.figure_type == 0:
         return 0

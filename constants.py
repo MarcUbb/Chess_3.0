@@ -64,7 +64,7 @@ CHECK = 0
 
 GAMEMODE = 0
 AI_TURN = 1
-AI_DELAY = 1000
+AI_DELAY = 1
 ############################
 
 
