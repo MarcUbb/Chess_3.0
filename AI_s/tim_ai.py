@@ -4,7 +4,7 @@ import evaluation
 
 def ai_function(board, TEAM):
     if check_for_check(board, TEAM):
-        print("Ohh ich bin schach du alter Schlawiner!")
+        print(" tim_ai: Ohh ich bin schach du alter Schlawiner!")
         king = 0
         for i in board.fields:
             for j in i:    
