@@ -22,7 +22,7 @@ def ai_function(board, team):
 
     king_moves = []                                                     #saves all possible moves for king
 
-    AI_s.ai_helper_functions.mark_move_pattern(board.fields[king_pos_y][king_pos_x], board)      #fills array with fields that can be moved on
+    AI_s.ai_helper_functions.mark_move_pattern(board.fields[king_pos_y][king_pos_x], board)  #TODO doesnt understand pawns    #fills array with fields that can be moved on
     for i in board.fields:
         for f in i:
             if f.active == True:
@@ -94,7 +94,7 @@ def ai_function(board, team):
     while i < len(moves):                                                   # gives every move that checks the ai the value -1
         j = 0
         while j < len(moves[i]):
-            test_board = copy.deepcopy(board)
+            test_board = copy.deepcopy(board)#AI_s.ai_helper_functions.Board(AI_s.ai_helper_functions.get_positioning(board)) #TODO 2nd call doesnt work
             test_board.fields[moves[i][j][0].pos_y][moves[i][j][0].pos_x].figure_moved = True
             test_board.fields[moves[i][j][0].pos_y][moves[i][j][0].pos_x].figure_team = team
             test_board.fields[moves[i][j][0].pos_y][moves[i][j][0].pos_x].figure_type = moves[i][j][0].figure_type

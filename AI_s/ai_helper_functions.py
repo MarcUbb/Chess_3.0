@@ -20,10 +20,10 @@ def check_for_check(board, team):   # checks if a given team is in check
 def get_positioning(board): # returns positioning on a board in initialisation form (to generate a copy board for example)
     positioning = []
     i = 0
-    while i < board.fields:
+    while i < len(board.fields):
         positioning.append([])
         j = 0
-        while j < board.fields[i]:
+        while j < len(board.fields[i]):
             positioning[i].append([board.fields[i][j].figure_team, board.fields[i][j].figure_type])
             j += 1
         i += 1

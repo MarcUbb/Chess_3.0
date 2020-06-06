@@ -64,7 +64,7 @@ CHECK = 0
 
 GAMEMODE = 0
 AI_TURN = 2
-AI_DELAY = 1
+AI_DELAY = 1000
 ############################
 
 
@@ -89,7 +89,7 @@ DRAWS_PLOT = []
 MOVES_PLOT = []
 MOVES_AVERAGE_PLOT = []
 
-UPDATE_FREQUENCY = 100
+UPDATE_FREQUENCY = 1
 ############################
 
 
