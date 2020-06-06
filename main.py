@@ -15,6 +15,7 @@ while True:                             # starts game loop
             sys.exit()
 
     if constants.RUNNING == False:      # game is finished
+        basic_functions.draw_window()   # updates window fo final position
         evaluation.evaluate()           # evaluate match
         basic_functions.reset_game()    # restart game
 

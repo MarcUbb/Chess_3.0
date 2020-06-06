@@ -2,9 +2,10 @@ import constants
 from matplotlib import pyplot as plt
 
 def evaluate():
-    print("White:", constants.WINS_WHITE, "Black:", constants.WINS_BLACK, "DRAWS:", constants.DRAWS, "Moves:", constants.MOVES, "Average Moves:", constants.MOVES_AVERAGE)
     print_board()
     results()
+    print("White:", constants.WINS_WHITE, "Black:", constants.WINS_BLACK, "DRAWS:", constants.DRAWS, "Moves:", constants.MOVES, "Average Moves:", constants.MOVES_AVERAGE)
+    
 
 def results():
 

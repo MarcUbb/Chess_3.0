@@ -31,10 +31,13 @@ def valid_ai_move(FIELD_CHOSEN, FIELD_MOVE):
         reset_markers()
         print("INVALID MOVE BY TEAM", constants.TURN, "!!!")
         if constants.TURN == 1:
+            constants.CHECK = 3
             constants.WINS_BLACK += 1
         else:
+            constants.CHECK = 4
             constants.WINS_WHITE += 1
         constants.RUNNING = False
+    reset_markers()
 
 
 def move_dead_figures(figure):

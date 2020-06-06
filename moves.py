@@ -29,8 +29,6 @@ def ai_move():
 
 
 def human_move():
-    #basic_functions.draw_window()
-
     if pygame.mouse.get_pressed()[0]:
         game_mechanics.reset_markers()
         if constants.MOVE == False:
@@ -41,11 +39,11 @@ def human_move():
                 game_mechanics.mark_move_pattern(constants.FIELD_CHOSEN, constants.BOARD)
         else:
             game_mechanics.mark_move_pattern(constants.FIELD_CHOSEN, constants.BOARD)
-            constants.FIELD_CHOSEN.active = True
+            #constants.FIELD_CHOSEN.active = True
             constants.FIELD_MOVE = constants.BOARD.fields[basic_functions.mouse_coordinates_to_field()[1]][basic_functions.mouse_coordinates_to_field()[0]]  # checks which coordinates were clicked and converts them in field coordinates
             if constants.FIELD_MOVE.figure_team != constants.TURN and constants.FIELD_MOVE.active: 
                 game_mechanics.check_for_draw()
-                game_mechanics.valid_ai_move(constants.FIELD_CHOSEN, constants.FIELD_MOVE)
+                #game_mechanics.valid_ai_move(constants.FIELD_CHOSEN, constants.FIELD_MOVE)
                 game_mechanics.move_dead_figures(constants.FIELD_MOVE)
                 game_mechanics.replace_figure(constants.FIELD_CHOSEN, constants.FIELD_MOVE)
                 game_mechanics.check_for_chess()
